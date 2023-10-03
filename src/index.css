@@ -1,13 +1,144 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+   background-color: #202020;
+   color: white;
+   font-family: 'poppins', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+#root {
+   display: flex;
+   justify-content: center;
+   font-size: 1rem;
+   margin-top: 2rem;
+}
+
+.title{
+   text-align: center;
+}
+
+.text{
+   color: mediumslateblue;
+   text-align: center;
+}
+
+.container {
+   margin-top: 2rem;
+   padding: 2rem 3rem;
+   border: 1px solid mediumslateblue;
+   border-radius: 8px;
+}
+
+input[type="text"] {
+   width: 21.875rem;
+   font-size: 1rem;
+   background-color: #202020;
+   padding: 8px;
+   outline: 0;
+   border: 1px solid mediumslateblue;
+   border-radius: 5px;
+   color: #c5c5c5;
+}
+
+input[type="text"]:focus {
+   border-color: slateblue;
+}
+
+.todo {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: mediumslateblue;
+   padding: 10px;
+   border-radius: 5px;
+   margin: 15px 0;
+   color: white;
+   font-size: 16px;
+   position: relative;
+}
+
+.todo:hover{
+   background-color: mediumpurple;
+}
+
+button{
+   padding: 10px;
+   border-radius: 5px;
+   background-color: mediumslateblue;
+   margin-left: 5px;
+   color: white;
+   border: none;
+   cursor: pointer;
+}
+
+button:hover{
+   background-color: rgba(123, 104, 238, 0.76);
+   box-shadow: 0 0 5px mediumslateblue,
+   0 0 10px mediumslateblue, 0 0 15px mediumslateblue,
+   0 0 20px mediumslateblue;
+}
+
+.todo p{
+   font-size: 1em;
+}
+
+.todo span {
+   cursor: pointer;
+   padding: 0;
+}
+
+.todo span:hover {
+   color: lightcoral;
+}
+
+.x{
+   opacity: 1;
+   position: absolute;
+   right: 13px;
+   color: #202020;
+   z-index: 99;
+}
+
+.x:hover{
+   z-index: 9999;
+}
+
+small{
+   display: block;
+   border-radius: 5px;
+   margin-bottom: 15px;
+   text-align: center;
+   padding: 10px 15px;
+}
+
+.deleted{
+   color: darkred;
+   background-color: lightpink;
+}
+
+.success{
+   color: darkgreen;
+   background-color: #befbbe;
+}
+
+.success.show, .deleted.show{
+   width: 380px;
+   position: fixed;
+   top: .5rem; /* Mengatur pesan di bagian atas */
+   animation-duration: 5000ms;
+   animation-name: myAnimation;
+   transition: ease-in;
+   animation-fill-mode: forwards;
+}
+
+
+@keyframes myAnimation{
+   0%{
+      opacity: 1;
+   }
+   75%{
+      opacity: .75;
+   }
+   100%{
+      opacity: 0;
+   }
 }
