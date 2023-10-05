@@ -113,11 +113,13 @@ small{
 .deleted{
    color: darkred;
    background-color: lightpink;
+   z-index: 99;
 }
 
 .success{
    color: darkgreen;
    background-color: #befbbe;
+   z-index: 99;
 }
 
 .success.show, .deleted.show{
